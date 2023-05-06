@@ -1,0 +1,12 @@
+from itertools import permutations
+string_number = raw_input().split()
+string = string_number[0]
+number = map(int, string_number[1])
+
+
+for elem in sorted(list(permutations(string, number[0]))):
+    n = len(elem)
+    elem_print = ""
+    for i in range(0, n):     
+        elem_print+=elem[i]
+    print elem_print
